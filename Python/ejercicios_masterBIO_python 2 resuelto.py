@@ -176,6 +176,12 @@ print(diccionario_animales)
 # 5. Imprimir los nombres de todos las bases, abreviatura y tipo con algún tipo de formato
 # %%
 # Solución
+info_adenina = {'A':púrica}
+info_guanina = {'G':púrica}
+info_timina = {'T':pirimidínica}
+info_citosina = {'C':pirimidínica}
+dic_bases_nitrogenadas = {}
+
 # %% markdown
 # ## Ejercicio 8
 # Realizar un programa que pida al usuario el nombre de un fichero, lo abra, cuente cuántas palabras de cada tipo existen y lo muestre por pantalla.
