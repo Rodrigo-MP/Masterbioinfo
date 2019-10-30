@@ -1,1 +1,6 @@
 print("Hello World")
+print("Esto es una segunda línea")
+print("vamos con la tercera línea")
+print("Esto es una segunda línea")
+print("vamos con la tercera línea")
+print("blablabla")
