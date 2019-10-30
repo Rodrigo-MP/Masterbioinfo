@@ -155,8 +155,18 @@ print('A:', contadorA, 'G:', contadorG, 'T:', contadorT, 'C:', contadorC)
 diccionario_animales = {}
 animal_español = input('Introduce el animal en español: ')
 animal_inglés = input('Introduce el animal en inglés: ')
-diccionario_animales['animal_español'] = animal_inglés
-
+animal_inglés = 0
+while animal_español != 'fin' :
+    animal_español = input('Introduce el animal en español: ')
+    animal_inglés = input('Introduce el animal en inglés: ')
+    if animal_español in diccionario_animales :
+        print('Este animal ya está en el diccionario')
+    if animal_español == 'fin' :
+        break
+    else:
+        diccionario_animales[animal_español] = animal_inglés
+print(diccionario_animales)
+# Solución del profesor
 # %% markdown
 # ## Ejercicio 7
 # 1. Crear un diccionario con el nombre de las 4 bases nitrogenadas del adn como clave y como valor  otro diccionario con dos elementos: la primera clave es ‘abreviatura’ y la segunda ‘tipo’ (indicando si es púrica o pirimídica).
