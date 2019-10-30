@@ -176,11 +176,17 @@ print(diccionario_animales)
 # 5. Imprimir los nombres de todos las bases, abreviatura y tipo con algún tipo de formato
 # %%
 # Solución
-info_adenina = {'A':púrica}
-info_guanina = {'G':púrica}
-info_timina = {'T':pirimidínica}
-info_citosina = {'C':pirimidínica}
-dic_bases_nitrogenadas = {}
+dic_bases_nitrogenadas = {
+    'adenina':{'abreviatura':'A','tipo':'púrica'},
+    'guanina':{'abreviatura':'G', 'tipo':'pirimidínica'},
+    'timina':{'abreviatura':'T','tipo':'púrica'},
+    'citosina':{'abreviatura':'C','tipo':'pirimidínica'}
+}
+print(dic_bases_nitrogenadas['adenina']['abreviatura'])
+print(dic_bases_nitrogenadas['citosina']['abreviatura'])
+print(dic_bases_nitrogenadas['guanina']['abreviatura'])
+print(dic_bases_nitrogenadas['timina']['abreviatura'])
+
 
 # %% markdown
 # ## Ejercicio 8
