@@ -1,0 +1,27 @@
+CPU = Registro-->R0,R1,Rn y Unidad aritmetológica
+
+Memoria = Datos, Instrucciones. A = 2 B = 3
+
+Instrucción.Mueve el valor de la variable A al registro 0, el que
+
+Función y lo que requiera la función dentro de un paréntesis. Input("Dame un dato")
+Siempre que haya un input lo que devuelva va a ser tipo cadena. 
+
+Print cambia todo al tipo cadena
+
+
+los rangos funcionan así. numeros[4:7] El primer rango existe siempre, y el último no se coje. 4, 5, 6
+
+Variables y funciones. Un objeto puede tener muchas variables dentro y append. objeto.metodo
+
+#### Dia 2
+
+Todo lo que sean enteros, cadenas
+
+Cadenas
+
+Las cadenas son inmutables, no se pueden modificar.Ni accediendo por índice ni nada.
+
+Operador in devuelve True or false
+
+con for voy a saber el numero de veces que voy a iterar, con while no.
