@@ -5,7 +5,7 @@ Memoria = Datos, Instrucciones. A = 2 B = 3
 Instrucción.Mueve el valor de la variable A al registro 0, el que
 
 Función y lo que requiera la función dentro de un paréntesis. Input("Dame un dato")
-Siempre que haya un input lo que devuelva va a ser tipo cadena. 
+Siempre que haya un input lo que devuelva va a ser tipo cadena.
 
 Print cambia todo al tipo cadena
 
@@ -25,3 +25,6 @@ Las cadenas son inmutables, no se pueden modificar.Ni accediendo por índice ni 
 Operador in devuelve True or false
 
 con for voy a saber el numero de veces que voy a iterar, con while no.
+
+
+#### Día 3 de apuntes
