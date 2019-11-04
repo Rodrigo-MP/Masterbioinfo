@@ -196,8 +196,10 @@ for key in dic_bases_nitrogenadas:
 # %% markdown
 # ## Ejercicio 8
 # Realizar un programa que pida al usuario el nombre de un fichero, lo abra, cuente cuántas palabras de cada tipo existen y lo muestre por pantalla.
-f = open('nombre_fichero')
+nombre_fichero = ()
 nombre_fichero = input('Introduce la ruta del fichero a analizar: ')
+f = open('nombre_fichero')
+
 for line in f:
     procesa(line)
 f.close()
@@ -209,7 +211,11 @@ f.close()
 # Contar cuántas veces aparece cada una de las bases en la cadena de DNA.
 #
 # Usando un diccionario que tiene como clave los codones y como valor el  aminoácido correspondiente, convertir todo el DNA en aminoácidos y guardarlo en un fichero llamado amino.txt.
-#
+# El diccionario que tenemos subido los codones están puestos en mayúsculas
+# cadena = "atgc"
+cadena_mayuscula = cadena.upper()
+print(cadena)
+print(cadena_mayuscula)
 # Contar cuántos aminoácidos de cada tipo hay.
 #
 # Por pantalla solicitar al usuario un porcentaje y mostrar cuáles son los aminoácidos por encima de ese porcentaje.
