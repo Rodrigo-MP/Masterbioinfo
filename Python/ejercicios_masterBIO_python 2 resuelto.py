@@ -191,7 +191,7 @@ dic_bases_nitrogenadas['uracilo'] = {'abreviatura':'U','tipo':'púrica'}
 print(dic_bases_nitrogenadas['uracilo']['abreviatura'])
 ### Imprime todo
 for key in dic_bases_nitrogenadas:
-    print(key, ':', dic_bases_nitrogenadas[key])
+    print(key,': tiene de abreviatura', dic_bases_nitrogenadas[key]['abreviatura'], ', y es de tipo', dic_bases_nitrogenadas[key]['tipo'])
 
 # %% markdown
 # ## Ejercicio 8
