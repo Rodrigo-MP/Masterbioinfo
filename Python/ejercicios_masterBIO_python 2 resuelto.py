@@ -90,20 +90,17 @@ lista = [1,7,5,4,78,9]
 lista_ordenada = sorted(lista)
 print(lista)
 print(lista_ordenada)
-
 lista1 = [1,2,3,4,5]
 lista2 = lista1
 x = 23
 lista2.append(x)
 print(lista2)
 print(lista1)
-
 # %% markdown
 # ## Ejercicio 3
 # Escribir un programa que pida al usuario números enteros hasta que introduzca un 0. Al finalizar el programa debe mostrar la cantidad de números introducidos.
 # %%
 # Solución
-
 n=int(input('Introduce numeros enteros: '))
 lista_numeros = []
 while n!=0:
@@ -111,7 +108,6 @@ while n!=0:
     print(lista_numeros)
     n=int(input('Introduce numeros enteros: '))
 print(lista_numeros)
-
 # %% markdown
 # ### Ejercicio 4
 # Pedir al usuario una cadena de adn y contar cuántas veces aparece cada una de las bases.
@@ -166,6 +162,7 @@ while animal_español != 'fin' :
     else:
         diccionario_animales[animal_español] = animal_inglés
 print(diccionario_animales)
+break
 # Solución del profesor
 # %% markdown
 # ## Ejercicio 7
@@ -192,17 +189,19 @@ print(dic_bases_nitrogenadas['uracilo']['abreviatura'])
 ### Imprime todo
 for key in dic_bases_nitrogenadas:
     print(key,': tiene de abreviatura', dic_bases_nitrogenadas[key]['abreviatura'], ', y es de tipo', dic_bases_nitrogenadas[key]['tipo'])
-
 # %% markdown
 # ## Ejercicio 8
 # Realizar un programa que pida al usuario el nombre de un fichero, lo abra, cuente cuántas palabras de cada tipo existen y lo muestre por pantalla.
-nombre_fichero = ()
-nombre_fichero = input('Introduce la ruta del fichero a analizar: ')
-f = open('nombre_fichero')
-
-for line in f:
-    procesa(line)
-f.close()
+f = open(input('Introduce el nombre de tu fichero: '))
+texto = f.read().split()
+dictado = {}
+for word in texto:
+    if word not in dictado.keys():
+        dictado[word]=1
+    else:
+        count = dictado[word]
+        dictado[word]=count+1
+print(dictado)
 # Solución
 # %% markdown
 # ## Ejercicio 9
@@ -213,6 +212,10 @@ f.close()
 # Usando un diccionario que tiene como clave los codones y como valor el  aminoácido correspondiente, convertir todo el DNA en aminoácidos y guardarlo en un fichero llamado amino.txt.
 # El diccionario que tenemos subido los codones están puestos en mayúsculas
 # cadena = "atgc"
+cadena_adn = "ATTGGCTCG"
+for i in range(0, len(cadena_adn), 3):
+    codon = cadena_adn[i] + cadena_adn[i+1] + cadena_adn[i+2]
+    print(codon)
 cadena_mayuscula = cadena.upper()
 print(cadena)
 print(cadena_mayuscula)
