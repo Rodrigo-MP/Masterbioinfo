@@ -186,7 +186,12 @@ print(dic_bases_nitrogenadas['adenina']['abreviatura'])
 print(dic_bases_nitrogenadas['citosina']['abreviatura'])
 print(dic_bases_nitrogenadas['guanina']['abreviatura'])
 print(dic_bases_nitrogenadas['timina']['abreviatura'])
-
+### Insertar el uracilo
+dic_bases_nitrogenadas['uracilo'] = {'abreviatura':'U','tipo':'púrica'}
+print(dic_bases_nitrogenadas['uracilo']['abreviatura'])
+### Imprime todo
+for key in dic_bases_nitrogenadas:
+    print(key, ':', dic_bases_nitrogenadas[key])
 
 # %% markdown
 # ## Ejercicio 8
