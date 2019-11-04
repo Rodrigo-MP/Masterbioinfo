@@ -196,7 +196,11 @@ for key in dic_bases_nitrogenadas:
 # %% markdown
 # ## Ejercicio 8
 # Realizar un programa que pida al usuario el nombre de un fichero, lo abra, cuente cuántas palabras de cada tipo existen y lo muestre por pantalla.
-# %%
+f = open('nombre_fichero')
+nombre_fichero = input('Introduce la ruta del fichero a analizar: ')
+for line in f:
+    procesa(line)
+f.close()
 # Solución
 # %% markdown
 # ## Ejercicio 9
