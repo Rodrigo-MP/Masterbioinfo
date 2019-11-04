@@ -18,14 +18,16 @@ print(dictado)
 #### Ejercicio 9
 # Abrir un fichero de genbank con datos de adn.
 f = open('/home/rodrigo/github/Masterbioinfo/Python/ejemploGenbank.gb','r+')
-f.readline(81:165)
-print(f)
+lines = f.readlines()
+lines_80_164 = lines[80:164]
+lines_80_164 = lines_80_164
+print(lines_80_164)
 # Contar cuántas veces aparece cada una de las bases en la cadena de DNA.
 contadorA = 0
 contadorG = 0
 contadorT = 0
 contadorC = 0
-for base in f:
+for base in lines_80_164:
     if base == 'A' or base == 'a':
         contadorA = contadorA + 1
     elif base == 'G' or base == 'g':

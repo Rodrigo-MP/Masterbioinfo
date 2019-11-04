@@ -206,9 +206,24 @@ print(dictado)
 # %% markdown
 # ## Ejercicio 9
 # Abrir un fichero de genbank con datos de adn.
-#
+f = open('/home/rodrigo/github/Masterbioinfo/Python/ejemploGenbank.gb','r+')
+f.readline(81:165)
+print(f)
 # Contar cuántas veces aparece cada una de las bases en la cadena de DNA.
-#
+contadorA = 0
+contadorG = 0
+contadorT = 0
+contadorC = 0
+for base in f:
+    if base == 'A' or base == 'a':
+        contadorA = contadorA + 1
+    elif base == 'G' or base == 'g':
+        contadorG = contadorG + 1
+    elif base == 'T' or base == 't':
+        contadorT = contadorT + 1
+    elif base == 'C' or base == 'c':
+        contadorC = contadorC +1
+print('A:', contadorA, 'G:', contadorG, 'T:', contadorT, 'C:', contadorC)
 # Usando un diccionario que tiene como clave los codones y como valor el  aminoácido correspondiente, convertir todo el DNA en aminoácidos y guardarlo en un fichero llamado amino.txt.
 # El diccionario que tenemos subido los codones están puestos en mayúsculas
 # cadena = "atgc"
