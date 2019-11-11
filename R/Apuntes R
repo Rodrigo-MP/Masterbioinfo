@@ -1,0 +1,5 @@
+Apuntes de R. Día 1
+
+Creamos el ambiente de conda con:
+conda create -n r r
+No olvidarnos de activar el ambiente con "Conda activate r"
