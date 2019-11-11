@@ -3,3 +3,23 @@ Apuntes de R. Día 1
 Creamos el ambiente de conda con:
 conda create -n r r
 No olvidarnos de activar el ambiente con "Conda activate r"
+
+Ejercicios:
+•
+Crear un vector “a” de 10 valores cualesquiera con números entre 1 y 100
+– Crear 2 subvectores de “a” con los números que están en las posiciones
+impares y pares (con seq() se pueden localizar los pares e impares)
+– Crear un subvector con los números de “a” mayores que 30
+a <- c(1,2,3,4,5,6,7,8,9,10)
+ind.par<-seq(2,10 by=2)
+ind.impar<-seq(1,10, by=2)
+b <-a[ind.par]
+•
+Supongamos que tenemos 3 variables calculadas con los valores de un OR
+y su intervalo de confianza: OR=1.33, OR_L=1.09 y OR_U=1.96.
+– Utiliza la función paste() para generar el siguiente texto:
+OR=1.33, IC95%:1.09 – 1.96
+•
+Define una matriz de dimensiones 30x3 cargada con los números 1 al 90
+– Crea un subvector con la 2o columna y las 10 primeras filas
+– Calcula la longitud y la media de ese subvector

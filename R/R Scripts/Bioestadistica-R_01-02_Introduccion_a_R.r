@@ -1,15 +1,15 @@
 ################################################################################
 ################################################################################
-## CURSO: Bioestadística con R - Máster de Bioinformática 
+## CURSO: Bioestadï¿½stica con R - Mï¿½ster de Bioinformï¿½tica
 ##
-## Autor: Jesús Herranz
-##    
-## Sesión 01: Introducción a R
-## Sesión 02: Variables y objetos de R           
+## Autor: Jesï¿½s Herranz
+##
+## Sesiï¿½n 01: Introducciï¿½n a R
+## Sesiï¿½n 02: Variables y objetos de R
 ##
 ################################################################################
 ################################################################################
-    
+
 ##########################################
 ## Ayuda
 
@@ -21,7 +21,7 @@ help.search("mean")
 example("mean")
 
 ##########################################
-## Librerías
+## Librerï¿½as
 
 search()
 library(survival)
@@ -57,7 +57,7 @@ save.image("C:/Bioestadistica con R/Temp/Ejemplo.RData")
 ## Salvar un objeto
 save( a, file="C:/Bioestadistica con R/Temp/Ejemplo2.RData")
 
-                   
+
 load("C:/Bioestadistica con R/Temp/Ejemplo.RData")
 ls()
 
@@ -82,7 +82,7 @@ b
 a+b
 
 a[2]
-a[5] 
+a[5]
 
 c<-c(4,6,9)
 a+c
@@ -103,7 +103,7 @@ mean.res <- rep(NA,20)
 mean.res
 
 ##########################################
-## Funciones básicas
+## Funciones bï¿½sicas
 
 x<-c(3.3, 3.2, 1.7, 2.3, 4.5, 2.6)
 min(x)
@@ -126,21 +126,21 @@ rank(x)
 x <- c( 3, NA, 6, 2, 4, 6, NA, 1)
 x
 is.na(x)
-sum(is.na(x))    ## Número de missings en x
+sum(is.na(x))    ## Nï¿½mero de missings en x
 mean(x)
 mean(x,  na.rm=T)
 
 ##########################################
 ## Caracteres
 
-a <- c("Hola", "Adiós")
-b <- "Hoy es un buen día"
+a <- c("Hola", "Adiï¿½s")
+b <- "Hoy es un buen dï¿½a"
 length(a)
 length(b)
 
-paste( "Me dijo", a[1], "y yo le respondí", a[2])
-paste( "Me dijo", a[1], "y yo le respondí", a[2], sep="-" )
-paste( "Me dijo", a[1], "y yo le respondí", a[2], sep="" )
+paste( "Me dijo", a[1], "y yo le respondï¿½", a[2])
+paste( "Me dijo", a[1], "y yo le respondï¿½", a[2], sep="-" )
+paste( "Me dijo", a[1], "y yo le respondï¿½", a[2], sep="" )
 
 grep("es",b)
 grep("xx",b)
@@ -153,7 +153,7 @@ cat( a, b )
 cat( a, b, "\n")
 
 ##########################################
-## Indexación
+## Indexaciï¿½n
 
 a <- c (3,2,1,2,5,6,NA,4,5,NA,4,8,NA,3,7)
 a[1]
@@ -173,7 +173,7 @@ a[-(1:2)]
 
 a <- 1:24
 a
-dim(a) <- c(4,6) 
+dim(a) <- c(4,6)
 a
 a[1,2]
 a[1,]
@@ -192,7 +192,7 @@ ncol(x)
 t(x)
 diag(x)
 
-rbind(1:3, 6:8, 10:12)                     
+rbind(1:3, 6:8, 10:12)
 
 ################################################################################
 ## Listas
@@ -202,16 +202,15 @@ a <- 4
 b <- c(1,2,3)
 
 list1 <- list ( a, b, "Hola")
-list1                                                
+list1
 list1[[1]]
 list1[[2]]
-list1[[2]] [3]    ## 3º elemento del 2º componente
+list1[[2]] [3]    ## 3ï¿½ elemento del 2ï¿½ componente
 
 names(list1) <- c("var", "vector", "texto")
 list1
 list1$vector
 
-## Alternativa  (así se usa con los resultados de las funciones)
+## Alternativa  (asï¿½ se usa con los resultados de las funciones)
 list2 <- list(var=a, vector=b, texto="Hola")
 list2
-
