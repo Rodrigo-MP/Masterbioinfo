@@ -1,22 +1,22 @@
 ################################################################################
 ################################################################################
-## CURSO: Bioestadística con R - Máster de Bioinformática 
+## CURSO: Bioestadï¿½stica con R - Mï¿½ster de Bioinformï¿½tica
 ##
-## Autor: Jesús Herranz
+## Autor: Jesï¿½s Herranz
 ##
-## Ejercicios Sesión 03: Tratamiento de datos    
+## Ejercicios Sesiï¿½n 03: Tratamiento de datos
 ##
 ################################################################################
 ################################################################################
 
-## Se leen el fichero 
-f1 <- read.csv(file="C://Bioestadistica con R/Ficheros para importar/Ejemplo 7.csv",
+## Se leen el fichero
+f1 <- read.csv(file="/home/rodrigo/github/Masterbioinfo/R/Ficheros para importar/Ejemplo 7.csv",
                  header=T, sep=";" )
 dim(f1)
 f1
 
-## Se leen el fichero 
-f2 <- read.csv(file="C://Bioestadistica con R/Ficheros para importar/Ejemplo 8.csv",
+## Se leen el fichero
+f2 <- read.csv(file="/home/rodrigo/github/Masterbioinfo/R/Ficheros para importar/Ejemplo 8.csv",
                  header=T, sep=";" )
 dim(f2)
 f2
@@ -26,15 +26,13 @@ f1$fumador <- as.factor(f1$fumador)
 
 ## Edad categorizada
 f1$edad60 <- as.integer ( f1$edad >= 60 )
+#le asigna la categorÃ­a edad60 a todos los datos que pertenezcan al grupo de lo de dentro del parÃ©ntesis
 f1
-                   
+
 ## Se unen con merge
 f3 <- merge ( f1, f2[ , c("id","med_2") ], by="id", all.x = TRUE)
- 
- 
+
+
 ## Se escribe el fichero
-write.table ( f3, "C://Bioestadistica con R/Temp/Ejemplo 7_8.txt", 
+write.table ( f3, "/home/rodrigo/github/Masterbioinfo/R/Ejemplo 7_8.txt",
             quote=FALSE , sep="\t", col.names=TRUE, row.names=FALSE)
-
-
-
