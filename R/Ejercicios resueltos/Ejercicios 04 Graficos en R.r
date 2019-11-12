@@ -20,15 +20,15 @@ plot (xx$edad, xx$peso)
 ## Gr�fico con par�metros
 dev.new()
 plot( xx$edad, xx$peso ,
-      main="Gr�fico de dispersi�n de peso frente a edad", 
+      main="Gráfico de dispersión de peso frente a edad",
       xlab="Edad", ylab="Peso",
-      cex.main = 0.9, cex.lab=1.2,
-      col="red", pch = 16, cex = 0.8 )
+      cex.main = 0.8, cex.lab=1.2,
+      col="blue", pch = 16, cex = 0.7 )
 
 ## Gr�fico sin ejes, y la funci�n axis()
 dev.new()
 plot (xx$edad, xx$peso,
-      main="Gr�fico de dispersi�n de peso frente a edad",
+      main="Gráfico de dispersión de peso frente a edad",
       xlab="Edad", ylab="Peso",
       cex.main = 0.9, cex.lab=1.2,
       col="red", pch = 16, cex = 0.8 ,
