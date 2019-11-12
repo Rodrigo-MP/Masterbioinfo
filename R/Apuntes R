@@ -23,3 +23,36 @@ OR=1.33, IC95%:1.09 – 1.96
 Define una matriz de dimensiones 30x3 cargada con los números 1 al 90
 – Crea un subvector con la 2o columna y las 10 primeras filas
 – Calcula la longitud y la media de ese subvector
+cd
+
+Día 2
+Data frames
+•
+#### Leer los ficheros de texto “Ejemplo 7.csv” y “Ejemplo 8.csv” que están en la
+#### carpeta “Ficheros para importar”
+
+#### Lectura fichero 1
+
+f1 <- read.csv(file="/home/rodrigo/github/Masterbioinfo/R/Ficheros para importar/Ejemplo 7.csv",
+                header=T, sep=";" )
+dim(f1)
+f1
+
+#### Lectura fichero 2
+
+f2 <- read.csv(file="/home/rodrigo/github/Masterbioinfo/R/Ficheros para importar/Ejemplo 8.csv",
+                header=T, sep=";" )
+dim(f2)
+f2
+
+
+– Definir la variable “fumador” como factor
+• Crear en el primer data frame una variable categorizando la edad (0 para
+menores de 60 años, 1 para el resto)
+• Unirlos con un merge(), creando un data frame nuevo que tenga:
+– Todas las variables y observaciones del fichero “Ejemplo 7.txt”
+– El nuevo data frame solo incluye la variable “med_2” del fichero “Ejemplo
+8.txt”
+•
+Salvar ese nuevo data frame en un fichero de texto separado por
+tabuladores (“\t”)
