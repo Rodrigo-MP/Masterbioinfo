@@ -1,39 +1,38 @@
 ################################################################################
 ################################################################################
-## CURSO: Bioestadística con R - Máster de Bioinformática 
+## CURSO: Bioestadï¿½stica con R - Mï¿½ster de Bioinformï¿½tica
 ##
-## Autor: Jesús Herranz
-##      
-## Ejercicos Sesión 04: Gráficos con R
+## Autor: Jesï¿½s Herranz
+##
+## Ejercicos Sesiï¿½n 04: Grï¿½ficos con R
 ##
 ################################################################################
 ################################################################################
 
-##############################################    
+##############################################
 ## Fichero Datos: Bajo peso al nacer
-xx <- read.csv(file="C://Bioestadistica con R/Datos/Bajo peso al nacer.csv", sep=";")
+xx <- read.csv(file="/home/rodrigo/github/Masterbioinfo/R/Datos/Bajo peso al nacer.csv", sep=";")
 
-## Gráfico sin parámetros
+## Grï¿½fico sin parï¿½metros
 dev.new()
 plot (xx$edad, xx$peso)
 
-## Gráfico con parámetros
+## Grï¿½fico con parï¿½metros
 dev.new()
 plot( xx$edad, xx$peso ,
-      main="Gráfico de dispersión de peso frente a edad", 
+      main="Grï¿½fico de dispersiï¿½n de peso frente a edad", 
       xlab="Edad", ylab="Peso",
-      cex.main = 0.9, cex.lab=1.2,           
+      cex.main = 0.9, cex.lab=1.2,
       col="red", pch = 16, cex = 0.8 )
-                      
-## Gráfico sin ejes, y la función axis()                      
+
+## Grï¿½fico sin ejes, y la funciï¿½n axis()
 dev.new()
-plot (xx$edad, xx$peso, 
-      main="Gráfico de dispersión de peso frente a edad", 
+plot (xx$edad, xx$peso,
+      main="Grï¿½fico de dispersiï¿½n de peso frente a edad",
       xlab="Edad", ylab="Peso",
-      cex.main = 0.9, cex.lab=1.2,           
-      col="red", pch = 16, cex = 0.8 , 
-      axes=FALSE, ann=FALSE)           
+      cex.main = 0.9, cex.lab=1.2,
+      col="red", pch = 16, cex = 0.8 ,
+      axes=FALSE, ann=FALSE)
 
 axis(1 , c(10,50))
-axis(2 , c(0,150))           
-
+axis(2 , c(0,150))

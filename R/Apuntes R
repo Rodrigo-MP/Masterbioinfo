@@ -61,3 +61,5 @@ f1$edad60 <- as.integer ( f1$edad >= 60 )
 •
 Salvar ese nuevo data frame en un fichero de texto separado por
 tabuladores (“\t”)
+
+Gráficos en R

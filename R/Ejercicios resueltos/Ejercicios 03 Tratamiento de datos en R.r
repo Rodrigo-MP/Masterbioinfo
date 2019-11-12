@@ -26,6 +26,7 @@ f1$fumador <- as.factor(f1$fumador)
 
 ## Edad categorizada
 f1$edad60 <- as.integer ( f1$edad >= 60 )
+### le pedimos que lo convierta a entero
 #le asigna la categoría edad60 a todos los datos que pertenezcan al grupo de lo de dentro del paréntesis
 f1
 
