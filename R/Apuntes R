@@ -76,3 +76,5 @@ for ( i in 1:length(x) )
   { break }
   { print ( x[i] ) }
 }
+
+Análisis de tablas de contingencia
