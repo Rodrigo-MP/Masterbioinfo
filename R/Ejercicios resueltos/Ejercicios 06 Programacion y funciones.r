@@ -30,7 +30,7 @@ AnalisisCategorica <- function ( var )
   list ( tabla = t1, prop = p1, porc = porc  )
 }
 
-
+ls()
 ################################################
 ## Ejecuci�n de la funci�n
 AnalisisCategorica (xx$raza)
