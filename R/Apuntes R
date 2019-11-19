@@ -78,3 +78,6 @@ for ( i in 1:length(x) )
 }
 
 Análisis de tablas de contingencia
+
+Día 5 Análisis de la varianza
+En el día anterior vimos cómo analizar las variables 2 a 2. Cuando las variables son categóricas

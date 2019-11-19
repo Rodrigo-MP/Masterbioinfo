@@ -1,13 +1,13 @@
 ################################################################################
 ################################################################################
-## CURSO: Bioestadística con R - Máster de Bioinformática 
+## CURSO: Bioestadï¿½stica con R - Mï¿½ster de Bioinformï¿½tica
 ##
-## Autor: Jesús Herranz
-## 
-## Ejercicios Sesión 09: Análisis de la Varianza
+## Autor: Jesï¿½s Herranz
+##
+## Ejercicios Sesiï¿½n 09: Anï¿½lisis de la Varianza
 ##
 ## Fichero de datos: umaru
-##    
+##
 ################################################################################
 ################################################################################
 
@@ -17,11 +17,11 @@ library(nortest)
 ## Fichero Datos: UMARU
 ################################################################################
 
-xx <- read.csv(file="C://Bioestadistica con R/Datos/umaru.csv", sep=";", header=TRUE)
+xx <- read.csv(file="/home/rodrigo/github/Masterbioinfo/R/Datos/umaru.csv", sep=";", header=TRUE)
 dim(xx)
 head(xx)
 
-## Variables categóricas
+## Variables categï¿½ricas
 
 xx$IVHX  <- factor(xx$IVHX)
 xx$RACE  <- factor(xx$RACE)
@@ -31,12 +31,12 @@ xx$DFREE <- factor(xx$DFREE)
 
 
 ################################################################################
-## Análisis de la varianza (ANOVA de un factor)
+## Anï¿½lisis de la varianza (ANOVA de un factor)
 ################################################################################
 
 ## Boxplots
 dev.new()
-boxplot ( xx$BECK ~  xx$IVHX, col=c("red","blue","yellow"), 
+boxplot ( xx$BECK ~  xx$IVHX, col=c("red","blue","yellow"),
           main="BECK - IVHX" )
 
 ## Medias, medianas y SD
@@ -47,11 +47,11 @@ tapply( xx$BECK, xx$IVHX, sd )
 
 #################
 ## Supuestos para aplicar el ANOVA
-   
+
 ## Contrastes de Normalidad en cada grupo (Kolmogorov-Smirnov Test)
-for ( i in 1:3 )
-{ 
-  print ( lillie.test( xx$BECK[xx$IVHX==i] ) ) 
+for ( i in 1:3 ) #Usar vector si no son nÃºmeros --> for (i in c("B","N","O"))
+{
+  print ( lillie.test( xx$BECK[xx$IVHX==i] ) )
 }
 
 ## Test de igualdad de varianza
@@ -61,13 +61,11 @@ bartlett.test ( xx$BECK ~  xx$IVHX )
 #################
 ## Test de medias
 
-## Análisis de la varianza (ANOVA de un factor)
+## Anï¿½lisis de la varianza (ANOVA de un factor)
 summary( aov ( xx$BECK ~  xx$IVHX ) )
 
 
-## Test no paramétrico de Kruskal-Wallis
+## Test no paramï¿½trico de Kruskal-Wallis
 kruskal.test ( xx$BECK ~  xx$IVHX )
-## Comparaciones múltiples, dos a dos (Wilcoxon Test)
+## Comparaciones mï¿½ltiples, dos a dos (Wilcoxon Test)
 pairwise.wilcox.test( xx$BECK , xx$IVHX , p.adj="bonferroni" )
-
-

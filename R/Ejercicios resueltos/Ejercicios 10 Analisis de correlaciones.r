@@ -1,13 +1,13 @@
 ################################################################################
 ################################################################################
-## CURSO: Bioestadística con R - Máster de Bioinformática 
+## CURSO: Bioestadï¿½stica con R - Mï¿½ster de Bioinformï¿½tica
 ##
-## Autor: Jesús Herranz
-## 
-## Ejercicios Sesión 10: Análisis de Correlaciones
+## Autor: Jesï¿½s Herranz
+##
+## Ejercicios Sesiï¿½n 10: Anï¿½lisis de Correlaciones
 ##
 ## Fichero de datos: Bajo peso al nacer
-##    
+##
 ################################################################################
 ################################################################################
 
@@ -15,7 +15,7 @@
 ## Fichero Datos: Bajo peso al nacer
 ################################################################################
 
-xx <- read.csv(file="C://Bioestadistica con R/Datos/Bajo peso al nacer.csv", sep=";")
+xx <- read.csv(file="/home/rodrigo/github/Masterbioinfo/R/Datos/Bajo peso al nacer.csv", sep=";")
 dim(xx)
 head(xx)
 
@@ -24,22 +24,18 @@ head(xx)
 ## Correlaciones
 ################################################################################
 
-## Correlación: Pearson, Spearman, Kendall
+## Correlaciï¿½n: Pearson, Spearman, Kendall
 cor ( xx$edad, xx$peso , method = "pearson", use="pairwise.complete.obs")
 cor ( xx$edad, xx$peso , method = "spearman", use="pairwise.complete.obs")
 cor ( xx$edad, xx$peso , method = "kendall", use="pairwise.complete.obs")
 
-## Test del coeficiente de correlación H0: r = 0
+## Test del coeficiente de correlaciï¿½n H0: r = 0
 cor.test ( xx$edad, xx$peso, method = "pearson", use="pairwise.complete.obs")
 
 
 ################################################################################
-## Gráfico de dispersión
+## Grï¿½fico de dispersiï¿½n
 ################################################################################
 
 dev.new()
 plot( xx$edad, xx$peso ,pch=16, xlab="Edad", ylab="Peso", col="blue")
-
-
-
-
